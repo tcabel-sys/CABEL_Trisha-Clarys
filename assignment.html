@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trisha Cabel | CS 1130 Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #2563eb;
+        }
+
+        .course-badge {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .hero {
+            max-width: 900px;
+            margin: 2.5rem auto 1.5rem;
+            padding: 0 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .hero p {
+            color: #475569;
+            font-size: 1.05rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-row {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .project-row:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .project-info h3 {
+            font-size: 1.15rem;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-info p {
+            color: #64748b;
+            font-size: 0.92rem;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        .action-btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            background-color: #2563eb;
+            color: #ffffff;
+            transition: background-color 0.2s;
+        }
+
+        .action-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .action-btn.pending {
+            background-color: #e2e8f0;
+            color: #64748b;
+            pointer-events: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Trisha Cabel</div>
+        <div class="course-badge">CS 1130 • Intro to Computing</div>
+    </nav>
+
+    <section class="hero">
+        <h1 id="greeting">Welcome to My Programming Portfolio</h1>
+        <p>A collection of HTML, CSS, and JavaScript web applications built for CS 1130.</p>
+    </section>
+
+    <main class="container">
+        <div class="project-list">
+            
+            <div class="project-row">
+                <div class="project-info">
+                    <h3>01. Unit Converter</h3>
+                    <p>Converts Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, and Feet to Meters.</p>
+                    <span class="tag">HTML Forms & JS Math</span>
+                </div>
+                <a href="#" class="action-btn pending">Not Yet Uploaded</a>
+            </div>
+
+            <div class="project-row">
+                <div class="project-info">
+                    <h3>02. Income Tax Calculator</h3>
+                    <p>Computes basic income tax based on graduated tax brackets.</p>
+                    <span class="tag">Conditional Statements</span>
+                </div>
+                <a href="#" class="action-btn pending">Not Yet Uploaded</a>
+            </div>
+
+            <div class="project-row">
+                <div class="project-info">
+                    <h3>03. Nth Factorial, Sum & Average</h3>
+                    <p>Calculates the factorial, sum, and average of the first N natural numbers.</p>
+                    <span class="tag">While / Do-While / For Loops</span>
+                </div>
+                <a href="#" class="action-btn pending">Not Yet Uploaded</a>
+            </div>
+
+            <div class="project-row">
+                <div class="project-info">
+                    <h3>04. Simple Payroll System</h3>
+                    <p>Manages employee lists, calculates gross/net pay, and dynamically updates a table.</p>
+                    <span class="tag">Arrays & DOM Manipulation</span>
+                </div>
+                <a href="#" class="action-btn pending">Not Yet Uploaded</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Created by Trisha Cabel | Hosted on GitHub Pages</p>
+    </footer>
+
+    <script>
+        // Automatically updates the greeting based on the visitor's time of day
+        const hour = new Date().getHours();
+        const greetingElement = document.getElementById("greeting");
+
+        if (hour < 12) {
+            greetingElement.textContent = "Good Morning! Welcome to My Portfolio";
+        } else if (hour < 18) {
+            greetingElement.textContent = "Good Afternoon! Welcome to My Portfolio";
+        } else {
+            greetingElement.textContent = "Good Evening! Welcome to My Portfolio";
+        }
+    </script>
+
+</body>
+</html>
